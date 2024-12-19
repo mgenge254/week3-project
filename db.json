@@ -1,0 +1,184 @@
+{
+    "players": [
+      {
+        "id": "1",
+        "username": "magnuscarlsen",
+        "name": "Magnus Carlsen",
+        "title": "World Chess Champion",
+        "country": "Norway",
+        "status": "Online",
+        "rating": 2855,
+        "joined": "2004-05-01",
+        "games": [
+          {
+            "game_id": "1",
+            "date": "2021-11-24",
+            "opponent": "nepomniachtchi",
+            "result": "Win",
+            "moves": [
+              "e4",
+              "e5",
+              "Nf3",
+              "Nc6"
+            ]
+          },
+          {
+            "game_id": "2",
+            "date": "2021-11-23",
+            "opponent": "nepomniachtchi",
+            "result": "Draw",
+            "moves": [
+              "d4",
+              "d5",
+              "c4",
+              "e6"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "username": "gmhikaru",
+        "name": "Hikaru Nakamura",
+        "title": "Grandmaster",
+        "country": "United States",
+        "status": "Online",
+        "rating": 2730,
+        "joined": "2001-02-17",
+        "games": [
+          {
+            "game_id": "1",
+            "date": "2021-10-15",
+            "opponent": "vachier_lagrave",
+            "result": "Win",
+            "moves": [
+              "e4",
+              "e5",
+              "Nf3",
+              "Nc6"
+            ]
+          },
+          {
+            "game_id": "2",
+            "date": "2021-09-28",
+            "opponent": "anand",
+            "result": "Loss",
+            "moves": [
+              "d4",
+              "Nf6",
+              "c4",
+              "e6"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "username": "anishgiri",
+        "name": "Anish Giri",
+        "title": "Grandmaster",
+        "country": "Netherlands",
+        "status": "Offline",
+        "rating": 2760,
+        "joined": "2009-03-11",
+        "games": [
+          {
+            "game_id": "1",
+            "date": "2021-05-10",
+            "opponent": "caruana",
+            "result": "Draw",
+            "moves": [
+              "e4",
+              "e5",
+              "Nf3",
+              "Nc6"
+            ]
+          },
+          {
+            "game_id": "2",
+            "date": "2021-05-05",
+            "opponent": "mvl",
+            "result": "Win",
+            "moves": [
+              "d4",
+              "Nf6",
+              "c4",
+              "e6"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "username": "levonaronian",
+        "name": "Levon Aronian",
+        "title": "Grandmaster",
+        "country": "Armenia",
+        "status": "Online",
+        "rating": 2765,
+        "joined": "2000-07-01",
+        "games": [
+          {
+            "game_id": "1",
+            "date": "2021-04-22",
+            "opponent": "carlsen",
+            "result": "Loss",
+            "moves": [
+              "e4",
+              "e5",
+              "Nf3",
+              "Nc6"
+            ]
+          },
+          {
+            "game_id": "2",
+            "date": "2021-04-15",
+            "opponent": "vachier_lagrave",
+            "result": "Draw",
+            "moves": [
+              "d4",
+              "Nf6",
+              "c4",
+              "e6"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "username": "fabianocaruana",
+        "name": "Fabiano Caruana",
+        "title": "Grandmaster",
+        "country": "United States",
+        "status": "Offline",
+        "rating": 2780,
+        "joined": "2005-09-19",
+        "games": [
+          {
+            "game_id": "1",
+            "date": "2021-03-25",
+            "opponent": "karlov",
+            "result": "Win",
+            "moves": [
+              "e4",
+              "e5",
+              "Nf3",
+              "Nc6"
+            ]
+          },
+          {
+            "game_id": "2",
+            "date": "2021-03-20",
+            "opponent": "mvl",
+            "result": "Loss",
+            "moves": [
+              "d4",
+              "Nf6",
+              "c4",
+              "e6"
+            ]
+          }
+        ]
+      }
+    ]
+  }
