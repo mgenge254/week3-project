@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Grandmaster Info</title>
+    <link rel="stylesheet" href="code.css">
+    <script src="code.js"></script>
+   
+</head>
+<body>
+    <div class="container">
+        <h1>Chess Grandmaster Info</h1>
+        <p>Enter the name of a Chess Grandmaster:</p>
+        <input type="text" id="gmName" placeholder="Enter name here" onkeydown="if(event.key === 'Enter') searchGrandmaster()">
+        <button onclick="searchGrandmaster()">Search</button>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        
+        const grandmasters = {
+            "Magnus Carlsen": {
+                description: "Magnus Carlsen is a Norwegian chess grandmaster and a five-time World Chess Champion. Known for his exceptional positional play and endgame prowess.",
+                games: [
+                    "Carlsen vs Anand, World Chess Championship 2013",
+                    "Carlsen vs Nepomniachtchi, World Chess Championship 2021",
+                    "Carlsen vs Aronian, 2012 Grand Slam Final"
+                ]
+            },
+            "Garry Kasparov": {
+                description: "Garry Kasparov is a Russian chess grandmaster and former World Chess Champion. He is considered one of the greatest chess players of all time.",
+                games: [
+                    "Kasparov vs Topalov, Wijk aan Zee 1999",
+                    "Kasparov vs Karpov, World Chess Championship 1985",
+                    "Kasparov vs Deep Blue, 1997"
+                ]
+            },
+            "Bobby Fischer": {
+                description: "Bobby Fischer was an American chess grandmaster and the 11th World Chess Champion. Known for his unmatched talent and eccentric personality.",
+                games: [
+                    "Fischer vs Spassky, World Chess Championship 1972",
+                    "Fischer vs Taimanov, Candidates Match 1971",
+                    "Fischer vs Byrne, 1956"
+                ]
+            }
+        };
+
+        
+        async function searchGrandmaster() {
+        const name = document.getElementById("gmName").value.trim();
+        const resultDiv = document.getElementById("result");
+
+        
+        resultDiv.innerHTML = "";
+
+        if (!name) {
+            resultDiv.innerHTML = "Please enter a name.";
+            resultDiv.classList.add("error");
+            return;
+        }
+
+        try {
+           
+            const response = await fetch(`https://api.chess.com/pub/player/${name.toLowerCase()}`);
+            
+            if (!response.ok) {
+                throw new Error("Grandmaster not found.");
+            }
+
+            const data = await response.json();
+
+            // Display the data (adjust to match the API's response structure)
+            resultDiv.innerHTML = `
+                <h2>${data.name || name}</h2>
+                <p>Username: ${data.username}</p>
+                <p>Status: ${data.status}</p>
+                <p>Joined: ${new Date(data.joined * 1000).toLocaleDateString()}</p>
+            `;
+            resultDiv.classList.remove("error");
+        } catch (error) {
+            resultDiv.innerHTML = "The name doesn’t exist, kindly try again.";
+            resultDiv.classList.add("error");
+        }
+    }
+    </script>
+</body>
+</html>
